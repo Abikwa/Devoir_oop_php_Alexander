@@ -7,6 +7,7 @@ class Taxi extends Vehicule{
     {
         parent::__construct($roue, $color, $typC, $num);
         $this->model = $model;
+        $this->type = "Taxi";
     }
     public function AffichageTaxi()
     {
