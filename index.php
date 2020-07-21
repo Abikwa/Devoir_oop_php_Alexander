@@ -1,8 +1,10 @@
 <?php
     use Devoir_oop_php_Alexandre\Vehicule\Vehicule\Vehicule;
     use Devoir_oop_php_Alexandre\Vehicule\Taxi\Taxi;
+    use Devoir_oop_php_Alexandre\Vehicule\Camion\Camion;
     include_once("Vehicule\Vehicule.php");
     include_once("Vehicule\Taxi.php");
+    include_once("Vehicule\Camion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styleTp2.css" />
-    <title>Devoir_oop_php_Alexandre</title>
+    <title>Devoir_oop_php_Alexander</title>
 </head>
 <body>
 <div id="corps">
@@ -29,10 +31,19 @@
             <aside class="answer"><!--  pillier dE LA POO-->
                 <?php
                      echo "<span class='question'>Taxi du type Vehicule</span>";
-                    $taxi = new Taxi(4, "blue", "Essence", "28522A", "SwagMOrtel");
+                    $taxi = new Taxi(4, "Rouge", "Essence", "278528522A", "SwagMOrtel");
                     $taxi->AffichageTaxi();
-                    $taxi = new Taxi(12, "Noire", "Mazout", "125-7854-DB", "Hungtolow");
+                    $taxi = new Taxi(4, "Noire", "Essence", "7825-7854-DB", "Hungtolow");
                     $taxi->AffichageTaxi();
+                ?>
+            </aside>
+            <aside class="answer"><!--  pillier dE LA POO-->
+                <?php
+                     echo "<span class='question'>Camion du type Vehicule</span>";
+                    $camion = new Camion(22, "blue", "Mazout", "7285-22A", "BENZ");
+                    $camion->AffichageCamion();
+                    $camion = new Camion(12, "Noire", "Mazout", "495-7854-DB", "ISUZU");
+                    $camion->AffichageCamion();
                 ?>
             </aside>
         </article>
