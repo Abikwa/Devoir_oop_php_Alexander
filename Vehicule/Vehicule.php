@@ -21,24 +21,24 @@ class Vehicule
                 $this->numPlaque = $num;
             }
             else
-                $this->err = "le nombre de roue doit probablment etre positif";
+                echo"le nombre de roue doit probablment etre positif";
         }
         else
-            $this->err = " non le nombre de roue fournit n'est pas vrai";
+            echo " non le nombre de roue fournit n'est pas vrai";
     }
     public function AffichageVehicule() // methode pour afichage du vehicule
     {
         if($this->nbreRoue >= 4)
         {
-            echo "ce Vehicule est caractvrise par :<br>".
+            echo "<b>ce Vehicule est caractvrise par :</b><br>".
                 "Numero du plaque : <span id='nom'><font color='blue'>".$this->numPlaque."</font></span><br>".
                 "Type de Carburant : <span id='nom'><font color='blue'>".$this->typeCarburant."</font></span><br>".
                 "Nombre de roue : <span id='nom'><font color='blue'>".$this->nbreRoue."</font></span><br>".
                 "Couleur : <span id='nom'><font color='blue'>".$this->couleur."</font></span><br>";
             if($this->nbreRoue >= 4 and $this->nbreRoue <= 6)
-                echo "<font color='green'>c'est un simple Vehicule</font>";
+                echo "<b><i><font color='green'>c'est un simple Vehicule</font></i></b>";
             else 
-                echo "<font color='green'>c'est un Vehicule lourd</font>";    
+                echo "<b><i><font color='green'>c'est un Vehicule lourd</font></i></b>";    
         }
         else
             echo "Renseigner d'abord un nombre valide des roues";
