@@ -8,6 +8,7 @@ class Vehicule
     private $couleur;
     private $typeCarburant;
     private $numPlaque;
+    private const FORM = "Rectangulaire"; //un consate
     private $err;
     public function __construct($roue, $color, $typC, $num) //constructreur
     {
@@ -34,11 +35,12 @@ class Vehicule
                 "Numero du plaque : <span id='nom'><font color='blue'>".$this->numPlaque."</font></span><br>".
                 "Type de Carburant : <span id='nom'><font color='blue'>".$this->typeCarburant."</font></span><br>".
                 "Nombre de roue : <span id='nom'><font color='blue'>".$this->nbreRoue."</font></span><br>".
-                "Couleur : <span id='nom'><font color='blue'>".$this->couleur."</font></span><br>";
+                "Couleur : <span id='nom'><font color='blue'>".$this->couleur."</font></span><br><BR>".
+                "avec une Forme ".Vehicule::FORM; //Affichge gu constante
             if($this->nbreRoue >= 4 and $this->nbreRoue <= 6)
-                echo "<b><i><font color='green'>c'est un simple Vehicule</font></i></b>";
+                echo "<b><i><font color='green'> c'est un simple Vehicule</font></i></b>";
             else 
-                echo "<b><i><font color='green'>c'est un Vehicule lourd</font></i></b>";    
+                echo "<b><i><font color='green'> c'est un Vehicule lourd</font></i></b>";    
         }
         else
             echo "Renseigner d'abord un nombre valide des roues";
