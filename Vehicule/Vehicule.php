@@ -3,17 +3,17 @@
 namespace Devoir_oop_php_Alexandre\Vehicule\Vehicule;
 class Vehicule
 {
+    //les proprietes
     private $nbreRoue;
     private $couleur;
     private $typeCarburant;
     private $numPlaque;
-    private $model;
     private $err;
-    public function __construct($roue, $color, $typC, $num)
+    public function __construct($roue, $color, $typC, $num) //constructreur
     {
         if(intval($roue) >= 4)
         {
-            if((intval($roue) % 2 ) == 0)
+            if((intval($roue) % 2 ) == 0) //verification  si le nombre de pneu est valide
             {
                 $this->nbreRoue = intval($roue);
                 $this->couleur = $color;
@@ -26,19 +26,19 @@ class Vehicule
         else
             $this->err = " non le nombre de roue fournit n'est pas vrai";
     }
-    public function AffichageVehicule()
+    public function AffichageVehicule() // methode pour afichage du vehicule
     {
-        if($this->nbreRoue > 4)
+        if($this->nbreRoue >= 4)
         {
             echo "ce Vehicule est caractvrise par :<br>".
-                "Numero du plaque : ".$this->numPlaque.
-                "Type de Carburant : ".$this->typeCarburant.
-                "Nombre de roue : ".$this->nbreRoue.
-                "Couleur : ".$this->couleur;
+                "Numero du plaque : <span id='nom'><font color='blue'>".$this->numPlaque."</font></span><br>".
+                "Type de Carburant : <span id='nom'><font color='blue'>".$this->typeCarburant."</font></span><br>".
+                "Nombre de roue : <span id='nom'><font color='blue'>".$this->nbreRoue."</font></span><br>".
+                "Couleur : <span id='nom'><font color='blue'>".$this->couleur."</font></span><br>";
             if($this->nbreRoue >= 4 and $this->nbreRoue <= 6)
-                echo "c'est un simple Vehicule";
+                echo "<font color='green'>c'est un simple Vehicule</font>";
             else 
-                echo "c'est un Vehicule lourd";    
+                echo "<font color='green'>c'est un Vehicule lourd</font>";    
         }
         else
             echo "Renseigner d'abord un nombre valide des roues";
