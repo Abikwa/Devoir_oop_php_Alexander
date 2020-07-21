@@ -8,6 +8,7 @@ class Vehicule
     private $couleur;
     private $typeCarburant;
     private $numPlaque;
+    protected $type;
     private const FORM = "<i><< Rectangulaire >></i>"; //un consate
     private $err;
     public function __construct($roue, $color, $typC, $num) //constructreur
@@ -31,7 +32,7 @@ class Vehicule
     {
         if($this->nbreRoue >= 4)
         {
-            echo "<BR><BR><b>ce Vehicule est caractvrise par :</b><br>".
+            echo "<BR><BR><b>ce Vehicule ".$this->type." est caractvrise par :</b><br>".
                 "Numero du plaque : <span id='nom'><font color='blue'>".$this->numPlaque."</font></span><br>".
                 "Type de Carburant : <span id='nom'><font color='blue'>".$this->typeCarburant."</font></span><br>".
                 "Nombre de roue : <span id='nom'><font color='blue'>".$this->nbreRoue."</font></span><br>".
