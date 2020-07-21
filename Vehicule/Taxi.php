@@ -5,9 +5,14 @@ class Taxi extends Vehicule{
     private $model;
     public function __construct($roue, $color, $typC, $num, $model)
     {
-        parent::__construct($roue, $color, $typC, $num);
-        $this->model = $model;
-        $this->type = "Taxi";
+        if($roue < 6)
+        {
+            parent::__construct($roue, $color, $typC, $num);
+            $this->model = $model;
+            $this->type = "Taxi";
+        }
+        else
+            echo"c'est ne pas un taxi";
     }
     public function AffichageTaxi()
     {
