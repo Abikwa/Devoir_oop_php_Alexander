@@ -1,7 +1,7 @@
 <?php
-    use Devoir_oop_php_Alexandre\Vehicule\Vehicule\Vehicule;
-    use Devoir_oop_php_Alexandre\Vehicule\Taxi\Taxi;
-    use Devoir_oop_php_Alexandre\Vehicule\Camion\Camion;
+    use Devoir_oop_php_Alexander\Vehicule\Vehicule\Vehicule;
+    use Devoir_oop_php_Alexander\Vehicule\Taxi\Taxi;
+    use Devoir_oop_php_Alexander\Vehicule\Camion\Camion;
     include_once("Vehicule\Vehicule.php");
     include_once("Vehicule\Taxi.php");
     include_once("Vehicule\Camion.php");
@@ -19,7 +19,7 @@
 <div id="corps">
         <h2 id="titre">Deuxieme travail traitant sur la POO en php</h2>
         <article>
-            <aside class="answer"><!--  pillier dE LA POO-->
+            <aside class="answer"><!--  pillier dE LA POO Creation des 2 vecules-->
                 <?php
                      echo "<span class='question'>Vehicule</span>";
                     $vehicule = new Vehicule(4, "blue", "Essence", "28522A");
@@ -28,7 +28,7 @@
                     $vehicule->AffichageVehicule();
                 ?>
             </aside>
-            <aside class="answer"><!--  pillier dE LA POO-->
+            <aside class="answer"><!--  pillier dE LA POO Creation des 2 vecules Taxi-->
                 <?php
                      echo "<span class='question'>Taxi du type Vehicule</span>";
                     $taxi = new Taxi(4, "Rouge", "Essence", "278528522A", "SwagMOrtel");
@@ -37,7 +37,7 @@
                     $taxi->AffichageTaxi();
                 ?>
             </aside>
-            <aside class="answer"><!--  pillier dE LA POO-->
+            <aside class="answer"><!--  pillier dE LA POO Creation des 2 vecules camion-->
                 <?php
                      echo "<span class='question'>Camion du type Vehicule</span>";
                     $camion = new Camion(22, "blue", "Mazout", "7285-22A", "BENZ");
