@@ -1,6 +1,6 @@
 <?php
-namespace Devoir_oop_php_Alexandre\Vehicule\Taxi;
-use  Devoir_oop_php_Alexandre\Vehicule\Vehicule\Vehicule;
+namespace Devoir_oop_php_Alexander\Vehicule\Taxi;
+use  Devoir_oop_php_Alexander\Vehicule\Vehicule\Vehicule;
 class Taxi extends Vehicule{
     private $model;
     public function __construct($roue, $color, $typC, $num, $model)
