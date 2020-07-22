@@ -1,9 +1,9 @@
 <?php
-namespace Devoir_oop_php_Alexandre\Vehicule\Camion;
-use  Devoir_oop_php_Alexandre\Vehicule\Vehicule\Vehicule;
+namespace Devoir_oop_php_Alexander\Vehicule\Camion;
+use  Devoir_oop_php_Alexander\Vehicule\Vehicule\Vehicule;
 class Camion extends Vehicule{
-    private $model;
-    public function __construct($roue, $color, $typC, $num, $model)
+    private $model; //propriete
+    public function __construct($roue, $color, $typC, $num, $model) //construceur
     {
         if($roue > 6)
         {
@@ -14,7 +14,7 @@ class Camion extends Vehicule{
         else
             echo "non ca n doit pas etre un Camion ca";
     }
-    public function AffichageCamion()
+    public function AffichageCamion() //affichae du vehicule camion
     {
         # code...
         $this->AffichageVehicule();
