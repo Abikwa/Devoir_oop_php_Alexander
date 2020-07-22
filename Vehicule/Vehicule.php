@@ -1,6 +1,6 @@
 <?php
 
-namespace Devoir_oop_php_Alexandre\Vehicule\Vehicule;
+namespace Devoir_oop_php_Alexander\Vehicule\Vehicule;
 class Vehicule
 {
     //les proprietes
